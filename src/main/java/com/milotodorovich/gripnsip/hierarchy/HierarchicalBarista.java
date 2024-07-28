@@ -1,5 +1,7 @@
 package com.milotodorovich.gripnsip.hierarchy;
 
+import com.milotodorovich.gripnsip.store.Barista;
+import com.milotodorovich.gripnsip.store.Barista.OrderType;
 import com.milotodorovich.gripnsip.store.Cup;
 import com.milotodorovich.gripnsip.store.Drink;
 import com.milotodorovich.gripnsip.hierarchy.HotCup;
@@ -8,14 +10,9 @@ import com.milotodorovich.gripnsip.hierarchy.LiddedCup;
 import java.util.Arrays;
 import java.util.List;
 
-public class Barista {
+public class HierarchicalBarista implements Barista {
 
-    public Barista() {}
-
-    public enum OrderType {
-        HOT,
-        FAST;
-    }
+    public HierarchicalBarista() {}
 
     public Drink processOrder(String liquid, OrderType... types) {
         List<OrderType> ots = Arrays.asList(types);

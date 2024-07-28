@@ -1,5 +1,6 @@
 package com.milotodorovich.gripnsip;
 
+import com.milotodorovich.gripnsip.hierarchy.Barista;
 import com.milotodorovich.gripnsip.store.Customer;
 import com.milotodorovich.gripnsip.store.Cup;
 import com.milotodorovich.gripnsip.store.Drink;
@@ -17,7 +18,8 @@ public class App
     }
 
     public static void simulateHierarchy() {
-        Drink d = new Cup("coffee");
+        Barista b = new Barista();
+        Drink d = b.processOrder();
         Customer c = new Customer("Daniel");
         c.enjoy(d);
     }

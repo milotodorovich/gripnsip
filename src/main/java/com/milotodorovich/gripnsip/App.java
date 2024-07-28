@@ -1,7 +1,7 @@
 package com.milotodorovich.gripnsip;
 
-import com.milotodorovich.gripnsip.hierarchy.Cup;
-import com.milotodorovich.gripnsip.hierarchy.Drink;
+import com.milotodorovich.gripnsip.store.Cup;
+import com.milotodorovich.gripnsip.store.Drink;
 
 /**
  * Hello world!

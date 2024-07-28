@@ -1,4 +1,4 @@
-package com.milotodorovich.gripnsip.hierarchy;
+package com.milotodorovich.gripnsip.store;
 
 public interface Drink {
     public void grip();

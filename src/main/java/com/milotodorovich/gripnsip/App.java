@@ -19,7 +19,7 @@ public class App
 
     public static void simulateHierarchy() {
         Barista b = new Barista();
-        Drink d = b.processOrder();
+        Drink d = b.processOrder("coffee");
         Customer c = new Customer("Daniel");
         c.enjoy(d);
     }

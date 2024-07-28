@@ -7,8 +7,8 @@ public class Barista {
 
     public Barista() {}
 
-    public Drink processOrder() {
-        Drink d = new Cup("coffee");
+    public Drink processOrder(String liquid) {
+        Drink d = new Cup(liquid);
         return d;
     }
 }

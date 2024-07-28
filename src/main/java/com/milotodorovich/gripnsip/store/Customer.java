@@ -12,7 +12,6 @@ public class Customer {
         System.out.println(this.name + " is enjoying their drink.");
         d.grip();
         d.sip();
-        System.out.println(this.name + " is satisfied.");
-
+        System.out.println(this.name + " is satisfied.\n");
     }
 }

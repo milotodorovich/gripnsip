@@ -2,6 +2,11 @@ package com.milotodorovich.gripnsip.hierarchy;
 
 import com.milotodorovich.gripnsip.store.Cup;
 import com.milotodorovich.gripnsip.store.Drink;
+import com.milotodorovich.gripnsip.hierarchy.HotCup;
+import com.milotodorovich.gripnsip.hierarchy.HotLiddedCup;
+import com.milotodorovich.gripnsip.hierarchy.LiddedCup;
+import java.util.Arrays;
+import java.util.List;
 
 public class Barista {
 
@@ -13,7 +18,17 @@ public class Barista {
     }
 
     public Drink processOrder(String liquid, OrderType... types) {
-        Drink d = new Cup(liquid);
+        List<OrderType> ots = Arrays.asList(types);
+        Drink d;
+        if (ots.contains(OrderType.HOT) && ots.contains(OrderType.FAST)) {
+            d = new HotLiddedCup(liquid);
+        } else if (ots.contains(OrderType.HOT)) {
+            d = new HotCup(liquid);
+        } else if (ots.contains(OrderType.FAST)) {
+            d = new LiddedCup(liquid);
+        } else {
+            d = new Cup(liquid);
+        }
         return d;
     }
 }
